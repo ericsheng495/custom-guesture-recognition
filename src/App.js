@@ -95,10 +95,13 @@ function App() {
     }
   };
 
-  useEffect(()=>{runHandpose()},[]);
+  useEffect(() => {
+    runHandpose();
+  }, []);
 
   return (
     <div className="App">
+      <h1>{emoji}</h1>
       <header className="App-header">
         <Webcam
           ref={webcamRef}
@@ -147,7 +150,6 @@ function App() {
         ) : (
           ""
         )}
-
         {/* NEW STUFF */}
       </header>
     </div>
